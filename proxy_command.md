@@ -1,4 +1,4 @@
-# 命令行下使用socket代理
+## 命令行下使用socket代理
 mac下shadowsocks默认http代理地址为 127.0.0.1 1807，根据实际情况修改。创建脚本
 ```
 vim /usr/local/bin/proxy
