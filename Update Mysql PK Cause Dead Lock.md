@@ -15,7 +15,7 @@
 
 新建表测试：
 
-```
+```mysql
 CREATE TABLE `t_test_info` (
   `Fcode` varchar(12) NOT NULL ,
   `Fscene` varchar(32) NOT NULL,
@@ -29,26 +29,26 @@ CREATE TABLE `t_test_info` (
 
 插入一条记录：
 
-```
+```mysql
 insert into t_test_info values("111","test",now(),now());
 ```
 
 A,B链接：
 
-```
+```mysql
 begin;
 select * from t_test_info where Fscene='test' for update;
 ```
 
 A链接
 
-```
+```mysql
 update t_test_info set Fcode='222' where Fcode="111";
 ```
 
 然后B链接报：
 
-```
+```mysql
 ERROR 1213 (40001): Deadlock found when trying to get lock; try restarting transaction
 ```
 
